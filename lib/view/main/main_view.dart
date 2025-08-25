@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_portfolio/view%20model/controller.dart';
+import 'package:flutter_portfolio/view/main/components/drawer/drawer2.dart';
 import 'package:flutter_portfolio/view/main/components/navigation_bar.dart';
-
-import 'components/drawer/drawer.dart';
 
 class MainView extends StatelessWidget {
   const MainView({super.key, required this.pages});
@@ -10,7 +9,7 @@ class MainView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: const CustomDrawer(),
+      drawer: CustomDrawer2(controller: controller),
       body: Center(
         child: Column(
           children: [
