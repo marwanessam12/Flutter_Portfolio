@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_portfolio/view%20model/controller.dart';
 import 'package:flutter_portfolio/view%20model/responsive.dart';
+import 'package:flutter_portfolio/view/main/main_view.dart';
 
 import 'navigation_button.dart';
 
@@ -24,7 +25,13 @@ class NavigationButtonList extends StatelessWidget {
                   },
                   text: 'Home'),
               if (!Responsive.isLargeMobile(context))
-                NavigationTextButton(onTap: () {}, text: 'About me'),
+                NavigationTextButton(
+                  onTap: () {
+                    scaffoldKey.currentState?.openEndDrawer();
+                  },
+                  text: 'About me',
+                ),
+
               NavigationTextButton(
                   onTap: () {
                     controller.animateToPage(1,
